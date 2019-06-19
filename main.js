@@ -19,9 +19,9 @@ btn.addEventListener('click', () => {
   recognition.start()
 })
 
-recognition.onspeechend = function() {
-  alert('voice is deactivated')
-}
+// recognition.onspeechend = function() {
+//   alert('voice is deactivated')
+// }
 
 try {
 
