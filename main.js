@@ -52,8 +52,8 @@ recognition.onresult = function(event) {
 }
 
 btn.addEventListener('click', () => {
-  recognition.start()
-  // readOutLoud("hi")
+  // recognition.start()
+  readOutLoud("how are you?")
 
 })
 
@@ -79,11 +79,11 @@ function readOutLoud(message) {
   } else if (message == 'hi') {
     const finalText = "bad bye. have the worst day of your life."
     speech.text = finalText
-  } else if (message == ('hey' || 'hello') {
+  } else if (message == ('hey' || 'hello')) {
     const finalText = hello[Math.floor(Math.random() * hello.length )]
     speech.text = finalText
   } else {
-    speech.text = doNotKnow[Math.floor(Math.random()* doNotKnow.length)]
+    speech.text = doNotKnow[Math.floor(Math.random() * doNotKnow.length)]
   }
 
   speech.volume = 1
