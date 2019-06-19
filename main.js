@@ -31,7 +31,7 @@ function readOutLoud(message) {
   speech.rate = 1
   speech.pitch = 1
 
-  window.SpeechSynthesis.speak(speech)
+  window.speechSynthesis.speak(speech)
 }
 
 try {
