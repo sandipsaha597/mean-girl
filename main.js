@@ -15,7 +15,7 @@ let greettings = [
   doNotKnow = [
     'You are so alone. Try to go back home.',
     'I have a boyfriend.',
-    'Leave me alone'
+    'Leave me alone',
     "You're awfully small to be so hugely irritating.",
     'you are a mistake by your parent',
     "you are burden of the earth."
