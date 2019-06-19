@@ -52,8 +52,8 @@ recognition.onresult = function(event) {
 }
 
 btn.addEventListener('click', () => {
-  // recognition.start()
-  readOutLoud("how are you?")
+  recognition.start()
+  // readOutLoud("how are you?")
 
 })
 
