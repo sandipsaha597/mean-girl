@@ -48,7 +48,7 @@ recognition.onresult = function(event) {
   const current = event.resultIndex
   const transcript = event.results[current][0].transcript
   content.textContent = transcript
-  readOutLoud(message)
+  readOutLoud(transcript)
 }
 
 btn.addEventListener('click', () => {
