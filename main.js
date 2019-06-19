@@ -48,12 +48,12 @@ recognition.onresult = function(event) {
   const current = event.resultIndex
   const transcript = event.results[current][0].transcript
   content.textContent = transcript
-  readOutLoud("how are you")
+  readOutLoud(message)
 }
 
 btn.addEventListener('click', () => {
-  // recognition.start()
-  readOutLoud("how are you")
+  recognition.start()
+  // readOutLoud("how are you")
 
 })
 
@@ -86,7 +86,7 @@ function readOutLoud(message) {
   }
 
   speech.volume = 1
-  speech.rate = 1
+  speech.rate = .7
   speech.pitch = 1
 
   window.speechSynthesis.speak(speech)
