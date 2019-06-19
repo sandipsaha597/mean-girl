@@ -29,7 +29,7 @@ let greettings = [
     "You have a very punchable face"
   ],
   slangs = 'fuck' || 'fucker' || 'bustard' || 'asshole' || 'shit',
-  hello = ['who are you?', 'I am busy', 'do not disturb me', 'what!']
+  hello = ['who are you?', 'I am busy', 'do not disturb me', 'i am not interested']
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const recognition = new SpeechRecognition()
@@ -53,7 +53,7 @@ recognition.onresult = function(event) {
 
 btn.addEventListener('click', () => {
   recognition.start()
-  // readOutLoud("how are you")
+  // readOutLoud("hi")
 
 })
 
@@ -63,7 +63,6 @@ btn.addEventListener('click', () => {
 
 function readOutLoud(message) {
   const speech = new SpeechSynthesisUtterance()
-  speech.text = doNotKnow[Math.floor(Math.random()* doNotKnow.length)]
 
   if(message.includes("how are you")) {
     const finalText = greettings[Math.floor(Math.random() * greettings.length )]
@@ -80,9 +79,11 @@ function readOutLoud(message) {
   } else if (message == 'hi') {
     const finalText = "bad bye. have the worst day of your life."
     speech.text = finalText
-  } else if (message == 'hey' || 'hello') {
+  } else if (message == ('hey' || 'hello') {
     const finalText = hello[Math.floor(Math.random() * hello.length )]
     speech.text = finalText
+  } else {
+    speech.text = doNotKnow[Math.floor(Math.random()* doNotKnow.length)]
   }
 
   speech.volume = 1
