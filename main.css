@@ -14,3 +14,15 @@ body {
 	font-weight: bold;
 	padding: 0.2em 1.1em;
 }
+
+footer {
+	background: #2e3131;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	padding: 5px;
+	width: 100%;
+}
+footer a {
+	color: #fff;
+}
