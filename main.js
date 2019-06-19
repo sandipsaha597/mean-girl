@@ -28,7 +28,7 @@ function readOutLoud(message) {
   const speech = new SpeechSynthesisUtterance()
   speech.text = message
   speech.volume = 1
-  speech.rate = 1
+  speech.rate = 2
   speech.pitch = 1
 
   window.speechSynthesis.speak(speech)
