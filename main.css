@@ -1,0 +1,16 @@
+body {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+	width: 100%;
+}
+
+.talk {
+	font-size: 30px;
+	text-transform: capitalize;
+	font-weight: bold;
+	padding: 0.2em 1.1em;
+}
