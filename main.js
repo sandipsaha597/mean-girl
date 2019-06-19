@@ -1,12 +1,13 @@
 const btn = document.querySelector('.talk'),
-  content = document.querySelector('.content')
+  content = document.querySelector('.content'),
+  supportMsg = document.querySelector('.supportMsg')
 
 let greettings = [
-  "I am good, you little piece of shit",
-  "Doing good",
-  "Leave me alone",
-  "I hate you",
-  "Get a life"
+  "I am good you little piece of shit..",
+  "Doing good.",
+  "Leave me alone.",
+  "I hate you.",
+  "Get a life."
 ],
   weather = [
     "Why do you ask, you don't go out anyway.",
@@ -32,6 +33,12 @@ let greettings = [
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 const recognition = new SpeechRecognition()
+
+if (SpeechRecognition || webkitSpeechRecognition in window) {
+  supportMsg.innerHTML = 'Your browser <strong>supports</strong> Speech recognition.';
+} else {
+  supportMsg.innerHTML = 'Sorry your browser <strong>does not support</strong> speech synthesis.';
+}
 
 recognition.onstart = function() {
   console.log('voice is activated.')
@@ -77,9 +84,6 @@ function readOutLoud(message) {
     const finalText = hello[Math.floor(Math.random() * hello.length )]
     speech.text = finalText
   }
-
-
-
 
   speech.volume = 1
   speech.rate = 1
